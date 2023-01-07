@@ -1,4 +1,11 @@
-# Turtle-Shape-Function
-This is a module which can make a rectangle, any regular polygon and star shape with a certain amount of points. This Python class uses Turtle and instructions for use are in the code.
+# Turtle Shape Function
 
-![](https://view-counter.tobyhagan.com/?user=ShashCode2348/Turtle-Shape-Function)
+## About
+
+A Python module (using `turtle`) to draw a rectangle, a star shape, or any regular polygon with a certain number of points.
+
+## Additional Information
+
+Instructions for use are present in the code.
+
+![View Counter](https://view-counter.tobyhagan.com/?user=ShashCode2348/Turtle-Shape-Function)

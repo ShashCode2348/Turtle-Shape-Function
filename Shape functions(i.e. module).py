@@ -1,3 +1,4 @@
+#To use these functions, import turtle as t, and add the functions to your code
 class turtleShapes:
     import turtle as t
     def rectangle_with_fill(horizontal, vertical, color):

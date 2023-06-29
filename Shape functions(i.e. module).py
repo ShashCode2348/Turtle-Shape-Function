@@ -1,7 +1,12 @@
 #To use these functions, import turtle as t, and add the functions to your code
-class turtleShapes:
-    import turtle as t
+#Lines 5-7 keep the window on top of all the other open windows. Feel free to use this as well
+import turtle as t
+class TurtleShapes:
+    window = t.Screen()
+    canvas = window.getcanvas().winfo_toplevel()
+    canvas.call('wm', 'attributes', '.', '-topmost', '1')
     def rectangle_with_fill(horizontal, vertical, color):
+        t.clear()
         t.pendown()
         t.pensize(1)
         t.color(color)
@@ -15,6 +20,7 @@ class turtleShapes:
         t.penup()
 
     def star_with_fill(length, points, color):
+        t.clear()
         sumangle = ((points * 2) - 2) * 180
         oneangle = sumangle/points
         smallangle = oneangle/3.5
@@ -31,18 +37,8 @@ class turtleShapes:
         t.end_fill()
         t.penup()
 
-    def star_with_fill_improved(length, points, color):
-        t.penup()
-        angle = 180 - (180/points)
-        t.color(color)
-        t.begin_fill()
-        for point in range(points):
-            t.forward(length)
-            t.right(angle)
-        t.end_fill()
-        t.penup()
-
     def any_polygon_with_fill(length, angles, color):
+        t.clear()
         sumangle = (angles - 2) * 180
         oneangle = (sumangle/angles) - 180
         t.color(color)
@@ -56,6 +52,7 @@ class turtleShapes:
         t.penup()
 
     def rectangle_without_fill(horizontal, vertical, color, pensize):
+        t.clear()
         t.pendown()
         t.pensize(pensize)
         t.color(color)
@@ -67,6 +64,7 @@ class turtleShapes:
         t.penup()
 
     def star_without_fill(length, points, color, pensize):
+        t.clear()
         sumangle = ((points * 2) - 2) * 180
         oneangle = sumangle/points
         smallangle = oneangle/3.5
@@ -81,30 +79,8 @@ class turtleShapes:
             t.left(bigangle)
         t.penup()
 
-    def star_without_fill_improved(length, points, color, pensize):
-        t.pendown()
-        angle = 180 - (180/points)
-        t.color(color)
-        t.pensize(pensize*2)
-        for point in range(points):
-            t.forward(length)
-            t.right(angle)
-        t.penup()
-        t.right((angle/4))
-        t.forward(pensize/4)
-        t.setheading(0)
-        t.pensize(1)
-        t.forward(pensize/4)
-        t.color('#FFFFFF')
-        t.pendown()
-        t.begin_fill()
-        for point in range(points):
-            t.forward(length - (pensize))
-            t.right(angle)
-        t.end_fill()
-        t.penup()
-
     def any_polygon_without_fill(length, angles, color, pensize):
+        t.clear()
         sumangle = (angles - 2) * 180
         oneangle = (sumangle/angles) - 180
         t.color(color)
@@ -114,11 +90,3 @@ class turtleShapes:
             t.forward(length)
             t.right(oneangle)
         t.penup()
-
-
-
-
-
-
-
-
